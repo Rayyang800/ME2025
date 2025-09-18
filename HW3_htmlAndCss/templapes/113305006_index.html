@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="Ray-Yang">
-<title>113305006_楊軒睿</title>
-<style>
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif; padding: 24px; line-height: 1.5; }
-header { margin-bottom: 18px; }
-.meta { color: #555; }
-table { border-collapse: collapse; width: 100%; max-width: 720px; }
-td, th { border: 1px solid #ccc; padding: 12px; vertical-align: top; }
-.photo { width: 180px; text-align: center; }
-.photo img { max-width: 100%; height: auto; display: block; }
-.facts li { margin-bottom: 6px; }
-a.card-link { text-decoration: none; color: inherit; }
-.btn { display:inline-block; padding:8px 12px; border-radius:6px; border:1px solid #888; text-decoration:none; }
-</style>
+<head>
+  <meta charset="utf-8">
+  <title>113305006_楊軒睿</title>
+  <!-- 引用外部 CSS -->
+ <link rel="stylesheet" href="../static/css/css1.css">
 </head>
-<body>
-<header>
-<h1>學號：113305006</h1>
-<p class="meta">姓名：楊軒睿</p>
+<body id="main-page">
+
+<header id="header">
+  <h1>學號：113305006</h1>
+  <p id="meta">姓名：楊軒睿</p>
 </header>
 
-
-<section>
-<h2>自我介紹</h2>
-
-
-<!-- 使用 table 布局：左側圖片/連結，右側介紹文字與 facts -->
-<table>
-<tr>
-<td class="photo">
-<!-- 圖片與文字都要能點擊到第二頁 -->
-<a class="card-link" href="./113305006_detail.html">
-<img src="../static/image/IMG_1578.jpg" alt="我的照片">
-<div>點我看更多 →</div>
-</a>
-</td>
-<td>
-<h3>簡短介紹</h3>
-<p>嗨，我是楊軒睿就讀中央大學。關於我：</p>
-
-
-<ul class="facts">
-<li><a href="./113305006_detail.html">喜歡去日本。</a></li>
-<li><a href="./113305006_detail.html">亂花錢吃好吃的。</a></li>
-<li><a href="./113305006_detail.html">玩股票。</a></li>
-<!-- 如需更多 facts，可往下新增 -->
-</ul>
-
-
-<p>
-<a class="btn" href="./113305006_detail.html">前往第二頁</a>
-</p>
-</td>
-</tr>
-</table>
+<section id="intro">
+  <h2>自我介紹</h2>
+  <table id="intro-table">
+    <tr>
+      <td id="photo">
+        <a id="card-link" href="./113305006_detail.html">
+          <img src="../static/image/IMG_1578.jpg" alt="我的照片">
+          <div>點我看更多 →</div>
+        </a>
+      </td>
+      <td id="info">
+        <h3>簡短介紹</h3>
+        <p>嗨，我是楊軒睿，就讀中央大學。關於我：</p>
+        <ul id="facts">
+          <li><a href="./113305006_detail.html">喜歡去日本。</a></li>
+          <li><a href="./113305006_detail.html">亂花錢吃好吃的。</a></li>
+          <li><a href="./113305006_detail.html">玩股票。</a></li>
+        </ul>
+        <p><a id="btn" href="./113305006_detail.html">前往第二頁</a></p>
+      </td>
+    </tr>
+  </table>
 </section>
 
-
-<footer style="margin-top:20px;color:#666;font-size:0.9rem;">
+<footer id="footer">
+  © 2025 楊軒睿
 </footer>
+
 </body>
 </html>
-

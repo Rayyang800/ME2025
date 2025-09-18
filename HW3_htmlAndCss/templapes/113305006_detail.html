@@ -1,15 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="Ray-Yang">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>更多：113305006_楊軒睿</title>
+<link rel="stylesheet" href="../static/css/css.css">
 <style>
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif; padding: 24px; }
-.container { max-width: 900px; }
-.back { margin-bottom: 12px; display:inline-block; }
-img { max-width:220px; height:auto; border-radius:8px; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif; padding: 24px; background: #fafafa; color:#333; }
+.container { max-width: 900px; margin:auto; background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+.back { margin-bottom: 12px; display:inline-block; color:#0066cc; text-decoration:none; }
+.back:hover { text-decoration:underline; }
+section { margin-top:32px; }
+section h2 { border-left:6px solid #0066cc; padding-left:10px; color:#0066cc; }
+img { max-width:220px; height:auto; border-radius:8px; margin:8px; box-shadow:0 1px 6px rgba(0,0,0,0.15); }
+ul { margin-top:10px; padding-left:20px; }
+video, iframe { max-width: 100%; margin-top: 12px; border-radius: 8px; box-shadow:0 1px 6px rgba(0,0,0,0.2); }
+form { margin-top: 24px; padding: 16px; border: 1px solid #ccc; border-radius: 8px; background: #f9f9f9; }
+form label { display: block; margin-top: 12px; font-weight: bold; }
+input[type="submit"] { background:#0066cc; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; margin-top:16px; }
+input[type="submit"]:hover { background:#004999; }
 </style>
 </head>
 <body>
@@ -17,18 +26,79 @@ img { max-width:220px; height:auto; border-radius:8px; }
 <a class="back" href="./113305006_index.html">← 回第一頁</a>
 <h1>關於我（詳細）</h1>
 
-
 <section>
 <h2>日本</h2>
 <img src="../static/image/IMG_3099.jpg" alt="我的照片">
+<img src="../static/image/IMG_2984.jpg" alt="我的照片">
+<ul>
+  <li>我曾經到訪過東京與京都，體驗日本文化。</li>
+  <li>對日式建築和歷史特別感興趣。</li>
+  <li>最喜歡的景點是京都清水寺與東京晴空塔。</li>
+</ul>
 </section>
+
 <section>
 <h2>食物</h2>
 <img src="../static/image/IMG_1957.jpg" alt="我的照片">
 <img src="../static/image/IMG_3883.jpg" alt="我的照片">
+<ul>
+  <li>喜歡嘗試不同料理，尤其是異國美食。</li>
+  <li>特別愛吃拉麵與壽司，也喜歡甜點如抹茶蛋糕。</li>
+  <li>平常自己下廚，擅長煎牛排和煮義大利麵。</li>
+</ul>
 </section>
+
+<section>
 <h2>股票</h2>
 <img src="../static/image/IMG_3100.jpg" alt="我的照片">
+<ul>
+  <li>有在研究台股與美股，持續追蹤市場趨勢。</li>
+  <li>專注在科技類股與新能源，尤其是電動車與 AI 公司。</li>
+  <li>把投資當作學習經濟趨勢的方式，也練習風險管理。</li>
+</ul>
+</section>
+
+<section>
+<h2>參考影片</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8xMkZB-u1s?si=Qs3V4sBg4PBcwDI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<ul>
+  <li>這是我旅行時拍的短片。</li>
+  <li>透過影片可以更真實記錄當下感受。</li>
+  <li>未來希望能拍更多 vlog 分享。</li>
+</ul>
+</section>
+
+<section>
+<h2>回饋表單</h2>
+<form action="#" method="post">
+  <label for="subject">主題 (下拉選單)</label>
+  <select id="subject" name="subject">
+    <option value="travel">旅遊</option>
+    <option value="food">食物</option>
+    <option value="stock">股票</option>
+  </select>
+
+  <label>你覺得最有趣的是？(單選)</label>
+  <input type="radio" id="travel" name="favorite" value="travel">
+  <label for="travel">旅遊</label>
+  <input type="radio" id="food" name="favorite" value="food">
+  <label for="food">食物</label>
+  <input type="radio" id="stock" name="favorite" value="stock">
+  <label for="stock">股票</label>
+
+  <label>你還想看到哪些內容？(多選)</label>
+  <input type="checkbox" id="tech" name="more[]" value="tech">
+  <label for="tech">科技</label>
+  <input type="checkbox" id="sports" name="more[]" value="sports">
+  <label for="sports">運動</label>
+  <input type="checkbox" id="life" name="more[]" value="life">
+  <label for="life">生活</label>
+
+  <label for="feedback">其他建議 (輸入框)</label>
+  <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea>
+
+  <input type="submit" value="提交">
+</form>
 </section>
 
 </div>

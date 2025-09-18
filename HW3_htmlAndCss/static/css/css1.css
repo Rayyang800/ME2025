@@ -1,0 +1,53 @@
+/* 基本樣式 */
+#main-page {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, 
+               "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  padding: 24px;
+  line-height: 1.5;
+}
+
+/* 標頭 */
+#header { margin-bottom: 18px; }
+#meta { color: #555; }
+
+/* 表格 */
+#intro-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 720px;
+}
+#intro-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  vertical-align: top;
+}
+
+/* 照片 */
+#photo { width: 180px; text-align: center; }
+#photo img { max-width: 100%; height: auto; display: block; }
+
+/* Facts */
+#facts li { margin-bottom: 6px; }
+
+/* 卡片連結 */
+#card-link { text-decoration: none; color: inherit; }
+
+/* 按鈕 */
+#btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  text-decoration: none;
+  color: #333;
+}
+#btn:hover {
+  background: #eee;
+}
+
+/* 頁尾 */
+#footer {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
