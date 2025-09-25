@@ -8,7 +8,7 @@ for (let i = 0; i <= 9; i++) {
 }
 
 // 運算符號按鈕 (+ - * /)
-let operators = ["+", "-", "*", "/"];
+let operators = ["+", "-", "*", "/","(",")"];
 for (let op of operators) {
   document.write('<button onclick="addChar(\'' + op + '\')">' + op + '</button>');
 }
