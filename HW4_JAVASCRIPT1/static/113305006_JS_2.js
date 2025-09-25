@@ -17,3 +17,19 @@ document.write('<br>');
 // = 按鈕 與 Clear 按鈕
 document.write('<button onclick="calculate()">=</button>');
 document.write('<button onclick="clearDisplay()">Clear</button>');
+
+function addChar(c) {
+  document.getElementById("display").value += c;
+}
+
+function calculate() {
+  let expr = document.getElementById("display").value;
+  if (expr === "") return;
+  try {
+    let result = eval(expr);
+    alert(expr + " = " + result);
+    document.getElementById("display").value = result; // 更新輸入框為答案
+  } catch (e) {
+    alert("算式錯誤，請重新輸入！");
+  }
+}
