@@ -33,3 +33,7 @@ function calculate() {
     alert("算式錯誤，請重新輸入！");
   }
 }
+
+function clearDisplay() {
+  document.getElementById("display").value = "";
+}
