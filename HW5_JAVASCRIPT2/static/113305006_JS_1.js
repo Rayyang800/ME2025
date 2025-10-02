@@ -36,9 +36,20 @@ function checkGuess() {
   } else if (guess < answer) {
     alert("太小了！");
   } else {
-    alert("答對了！你總共猜了 " + attempts + " 次。\n遊戲重新開始！");
-    // 重新生成答案與計數
+       // 答對
+    let elapsed = Math.floor((new Date() - startTime) / 1000);
+    message.textContent = "答對了！總共猜了 " + attempts + " 次，耗時 " + elapsed + " 秒。";
+    stopTimer();
+
+    // 新增紀錄
+    let li = document.createElement("li");
+    li.textContent = "次數：" + attempts + "，耗時：" + elapsed + " 秒，時間：" + new Date().toLocaleTimeString();
+    document.getElementById("history").appendChild(li);
+
+    // 遊戲重置
     answer = Math.floor(Math.random() * 101);
     attempts = 0;
+    startTime = null;
+    document.getElementById("timer").textContent = "計時：0 秒";
   }
 }
