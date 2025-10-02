@@ -78,6 +78,7 @@ checkoutBtn.addEventListener("click", () => {
   if (total <= 0) return;
 
   let resultHtml = "<h3>結帳明細</h3><ul>";
+  let alertText = "=== 結帳明細 ===\n";
   let finalTotal = 0;
 
   document.querySelectorAll("tbody tr").forEach(row => {
@@ -91,6 +92,7 @@ checkoutBtn.addEventListener("click", () => {
     if (checkbox.checked && qty > 0) {
       const subtotal = price * qty;
       resultHtml += `<li>${name} x ${qty} = $${subtotal}</li>`;
+      alertText += `${name} x ${qty} = $${subtotal}\n`;
       finalTotal += subtotal;
 
       // ✅ 更新庫存
@@ -113,8 +115,15 @@ checkoutBtn.addEventListener("click", () => {
   });
 
   resultHtml += `</ul><strong>總金額 = $${finalTotal}</strong>`;
+  alertText += `------------------\n總金額 = $${finalTotal}`;
+
+  // 顯示在網頁
   checkoutResult.innerHTML = resultHtml;
   checkoutResult.style.display = "block";
+
+  // 顯示 alert
+  alert(alertText);
+
   checkboxAll.checked = false;
   calculateTotal();
 });
