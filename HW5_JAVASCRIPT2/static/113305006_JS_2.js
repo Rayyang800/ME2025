@@ -55,3 +55,48 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSubtotal(row);
       }
     });
+     // 輸入框 blur 驗證
+    input.addEventListener("blur", () => {
+      let qty = parseInt(input.value);
+      if (isNaN(qty) || qty < 1) qty = 1;
+      if (qty > stock) qty = stock;
+      input.value = qty;
+      updateSubtotal(row);
+    });
+  });
+
+  // 結帳
+  checkoutBtn.addEventListener("click", () => {
+    let total = parseInt(totalSpan.textContent);
+    if (total <= 0) return;
+
+    let resultHtml = "<h3>結帳明細</h3><ul>";
+    document.querySelectorAll("tbody tr").forEach(row => {
+      const checkbox = row.querySelector(".item-checkbox");
+      const input = row.querySelector(".quantity");
+      const stock = parseInt(input.dataset.stock);
+      const name = row.cells[1].textContent;
+      const qty = parseInt(input.value);
+
+      if (checkbox.checked && qty > 0) {
+        resultHtml += `<li>${name} x ${qty}</li>`;
+        // 更新庫存
+        input.dataset.stock = stock - qty;
+        if (stock - qty > 0) {
+          input.value = 1;
+        } else {
+          input.value = 0;
+        }
+        updateSubtotal(row);
+      }
+
+      // 結帳後取消勾選
+      checkbox.checked = false;
+    });
+    resultHtml += "</ul>";
+    checkoutResult.innerHTML = resultHtml;
+    checkoutResult.style.display = "block";
+    checkboxAll.checked = false;
+    calculateTotal();
+  });
+});
