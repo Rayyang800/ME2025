@@ -21,3 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     row.querySelector(".subtotal").textContent = price * qty;
     calculateTotal();
   }
+    // 全選/全不選
+  checkboxAll.addEventListener("change", () => {
+    const checked = checkboxAll.checked;
+    checkboxes.forEach(cb => cb.checked = checked);
+    calculateTotal();
+  });
