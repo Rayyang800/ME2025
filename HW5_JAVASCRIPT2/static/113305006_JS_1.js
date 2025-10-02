@@ -32,9 +32,9 @@ function checkGuess() {
   }
 
   if (guess > answer) {
-    alert("太大了！");
+    message.textContent = "太大了！";
   } else if (guess < answer) {
-    alert("太小了！");
+    message.textContent = "太小了！";
   } else {
        // 答對
     let elapsed = Math.floor((new Date() - startTime) / 1000);
