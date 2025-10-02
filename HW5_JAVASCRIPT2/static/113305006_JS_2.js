@@ -14,3 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     totalSpan.textContent = total;
   }
+    // 更新小計
+  function updateSubtotal(row) {
+    const price = parseInt(row.querySelector(".price").dataset.price);
+    const qty = parseInt(row.querySelector(".quantity").value);
+    row.querySelector(".subtotal").textContent = price * qty;
+    calculateTotal();
+  }
